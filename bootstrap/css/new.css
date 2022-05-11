@@ -1,0 +1,90 @@
+body{
+    background: #f4f5f8;
+}
+.button{
+    font-size:16.5px;
+    font-weight: 600;
+}
+.border{
+    border:1px solid red;
+}
+
+ .navbar-brand{
+
+    
+ }
+ .course-title{
+     font-size:1.3rem;
+     margin-top:10px;
+     margin-bottom:10px;
+ }
+.banner{
+    /* background: url("images/New-Horizon-Banner.jpg") no-repeat; */
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 30px;
+}
+.banner img{
+    width:100%;
+}
+.content-box{
+    background-color: #fff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.image-box{
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    /* align-items: center; */
+    max-width:100%;
+    margin:0 auto;
+    border:0px solid red;
+
+}
+.course-image{
+    max-width:100%;
+    text-align: center;
+}
+.course-desc>p, .content-textbox>p{
+    text-align: justify;
+    display: block;
+    margin:0 0 10px;
+    color:#817f7f;
+    font-size:17px;
+    line-height: 1.8em;
+}
+.myrow{
+    margin-bottom: 15px;
+          
+}
+.course-box{
+    background-color: #fff;
+    padding-top:30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+.banner{
+margin-bottom: 15px;
+}
+.myrow{
+margin-left:10px;
+margin-right: 10px;
+background: none;
+}
+.course-box{
+margin-bottom:30px;
+border:0px solid green;
+background: #fff;
+padding-top:20px;
+padding-bottom: 20px;;
+}
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+
+}

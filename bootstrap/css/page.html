@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <div style="width:80%;border:1px solid;margin:30px auto;padding:30px">
+            <form method="post" action="" id="faq">
+
+            </form>
+        </div>
+    
+   
+        <script>
+            faq={
+                "what is HTML":["a","b","c"],
+                "What is CSS" :["e","f","d"]
+            }
+            for(x in faq){
+                         
+                document.getElementById("faq").innerHTML ="<p><label>"+x+"</label></p><p id='control'></p>" 
+            for(i=0; i<faq[x].length;i++) {
+                alert(faq[x][i])
+                document.getElementById("control").innerHTML +="<input type='radio' name=''>"+faq[x][i]+"<br>"
+                }          
+            }
+        </script>
+
+   <script src="js/my.js"></script> 
+   
+   <script>
+       a="";
+       visible=true;
+       firstname="temitope"
+       lastname="Sola-Fagoroye"
+       firstname="Sola";
+       const course="Web Design"
+       age=13; 
+// alert("my name is "+firstname+" " + lastname+". I am "+age+" years old")
+    //    Data type
+    months=["january","Feb","Mar"];
+    // for(), while loop(), for...in
+    // for(initial;test;increament){
+
+    // }
+    document.write("<select>")
+    for(i=0;i<months.length;i++){
+        document.write('<option value="'+months[i]+'">'+months[i]+'</option>')
+    }
+    document.write("</select>")
+    
+    //multidimensional array
+    document.write("<table id='fruits' border='1'><tr><td>Fruit Name</td><td>Qunaity</td></tr>")
+    fruit=[["banner", 20],["Apple", 30],["orange", 10]]
+    //add another item to array
+    fruit.push(["Mango", 30])
+    //place an item at the beginning of array
+    fruit.unshift(["Pineapple", 6])
+    for(i=0;i<fruit.length;i++){
+        document.write("<tr>")     
+            for(x=0;x<fruit[i].length;x++){              
+                document.write("<td>"+fruit[i][x]+"</td>")
+            }
+            document.write("</tr>")
+    }
+    document.write("</table>")
+    //faq
+
+   </script>
+</body>
+</html>

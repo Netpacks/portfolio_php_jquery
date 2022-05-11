@@ -1,0 +1,122 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+/*table style begins*/
+    .table-wrap{
+        width:70%;
+        margin:40px auto 0;
+        padding:0;
+        border:1px solid;
+        border-top-left-radius: 7PX;
+        border-top-right-radius:7px;
+    }
+    .table-wrap table{
+        width:100%;
+        border-collapse: collapse;
+    }
+    .table-wrap thead tr{
+        background:#1646d1;
+        color:#fff;
+        font-weight:700;
+        font-size:18px
+    }
+    .table-wrap thead th{
+        padding:20px 15px;
+    }
+    .table-wrap tbody tr:nth-child(even){
+        background-color:rgb(235, 226, 226)
+    }
+    .table-wrap tbody tr td{
+        padding:15px 10px
+    }
+    .table-wrap tbody tr:hover{
+        background: red;;
+    }
+
+/*end of table style*/
+#portfolio{
+display: grid;
+grid-template-columns:1fr 1fr 1fr 1fr;
+
+}
+.box{
+    padding:30px 20px;
+    border:2px solid;
+}
+.header{
+    grid-area: header;
+    background:rgb(241, 28, 241);
+    padding:40px 0;
+    text-align: center;
+}
+.sidebar{
+    grid-area: sidebar;
+    background: greenyellow;
+    padding: 30px 0;
+}
+.feature1{
+    grid-area: f1;
+    background: hotpink;
+    padding:30px 0
+}
+.feature2{
+    grid-area: f2;
+    background: indianred;
+    padding:30px 0
+}
+.footer{
+    grid-area: footer;
+    background: lawngreen;
+    padding:30px 0
+}
+.wrapper{
+    height:100vh;
+    display: grid;
+    grid-template-columns:25% 50% auto 20% ;
+    grid-template-rows:120px auto auto 70px;
+    grid-template-areas: "header header header header"
+                          "sidebar f1 . f2"
+                          "sidebar main main main"
+                          "footer footer footer footer";
+}
+.content{
+    grid-area: main;
+    background: red;
+    padding:30px 0;
+    color:#fff;
+}
+@media screen and (max-width:992px){
+   #portfolio{
+    grid-template-columns: 1fr 1fr;
+   } 
+   .wrapper{
+       grid-template-columns: 5fr 1fr 2fr;
+       grid-template-rows:120px auto auto auto 70px;
+    grid-template-areas:"header header header"
+                    "sidebar sidebar sidebar"
+                    "f1 . f2"
+                    "main main main"
+                    "footer footer footer"
+       ;
+   }
+}
+@media screen and (max-width:600px){
+    #portfolio{
+        display:block;
+    }
+    .wrapper{
+        grid-template-columns: 1fr;
+        grid-template-rows:120px auto auto auto auto 70px;
+     grid-template-areas:"header"
+                     "sidebar"
+                     "f2"
+                     "f1"
+                     "main"
+                     "footer"
+        ;
+        padding-left:10px;
+        padding-right:10px;
+    }
+}
